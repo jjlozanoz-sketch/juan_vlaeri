@@ -1,0 +1,15 @@
+{
+  "hash": "89b7691fc055907f9e43b2fa9d9731bf",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"DISTRIBUCIONES DE FRECUENCIAS\"\nsubtitle: \"TALLER 1\"\nauthor: \n  - name: Juan Jose lozano<br>valerie Rincon\n    affiliation: \"Universidad del Tolima\"\n    affiliation-url: \"https://www.ut.edu.co/\"\ndate: today\nlang: es\ntitle-block-banner: \"#98b6ed\"\n\nformat:\n  html:\n    page-layout: full\n    fontsize: 14pt\n    toc: true\n    toc-location: right\n    number-sections: true\n    code-fold: true\n    code-summary: \"Ver código\"\n    theme: dark\n    highlight-style: monokai\n    html-math-method: katex\n    smooth-scroll: true\n    link-external-newwindow: true\n    code-overflow: scroll\n    favicon: favicon.ico\n    \neditor: visual\n\nknitr:\n  opts_chunk:\n    message: false\n    warning: false\n    fig.align: center\n    fig.width: 6\n    fig.height: 6\n    out.width: \"70%\"\n---\n\n\n::: {.cell layout-align=\"center\"}\n\n```{.r .cell-code}\noptions(\n  knitr.table.format = \"html\",\n  scipen = 999\n)\n```\n:::\n\n\n```{=html}\n<div style=\"position:absolute; top:10px; right:10px;\">\n<img src=\"Logo_ut.png\" width=\"150\">\n</div>\n```\n\n```{=html}\n<style>\nbody{\n  background-color:#f7f6ed;\n  font-size:130%;\n  text-align:justify;\n}\n</style>\n```\n\n#Paquetes\n\nipak <- function(pkg){\n\n  options(repos = c(CRAN=\"https://cloud.r-project.org\"))\n\n  new.pkg <- pkg[!(pkg %in% rownames(installed.packages()))]\n\n  if(length(new.pkg)) install.packages(new.pkg, dependencies = TRUE)\n\n  invisible(lapply(pkg, function(p)\n    suppressPackageStartupMessages(library(p, character.only = TRUE))\n  ))\n}\n\npackages <- c(\"tidyverse\",\"kableExtra\",\"psych\",\"readxl\")\n\nipak(packages)\n```quarto publish posit-connect-cloud\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
